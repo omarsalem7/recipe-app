@@ -3,8 +3,20 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.1'
 
-gem 'ffi', '~> 1.15', '>= 1.15.5'
+gem 'cancancan'
 
+gem 'jwt'
+
+gem 'htmlbeautifier'
+
+gem 'letter_opener'
+
+# gem 'bullet', group: 'development'
+
+# add device for authentication
+gem 'devise'
+
+gem 'ffi', '~> 1.15', '>= 1.15.5'
 # linters installitions
 gem 'rubocop', '>= 1.0', '< 2.0'
 
@@ -44,7 +56,7 @@ gem 'tzinfo-data'
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-# gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]  ######################
+# gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby] ###########
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false

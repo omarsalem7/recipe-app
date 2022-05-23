@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/ROR-Template-blueviolet)
 
-# Project Title
+# Recipe App
 
 > Description of the project
 

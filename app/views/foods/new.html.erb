@@ -1,0 +1,26 @@
+<h1>Add new food</h1>
+
+<%= form_with model: @food, url: "/users/#{current_user.id}/foods" do |f| %>
+
+<div class="details-box">
+    <div>
+      <%= f.label :Name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div>
+      <%= f.label :Measurement_Unit  %>
+      <%= f.select :measurement_unit,['grams', 'units', 'litres'] %>
+    </div>
+
+    <div>
+      <%= f.label :Price %>
+      <%= f.number_field :price %>
+    </div>
+
+    <div>
+      <%= f.submit %>
+    </div>
+  </div>
+
+<% end%>

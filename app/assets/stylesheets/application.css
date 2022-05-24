@@ -22,6 +22,7 @@ input[type='submit'] {
   color: white;
   width: 15vw;
 }
+
 input[type='submit']:hover {
   transform: scale(0.95);
 }

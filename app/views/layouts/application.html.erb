@@ -10,8 +10,14 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+     <%= render 'devise/shared/navbar' %>
+
+    <div>
+      <% flash.each do |name, msg| -%>
+        <p><%= msg %></p>
+      <% end -%>    
+    </div>
+    
     <%= yield %>
   </body>
 </html>

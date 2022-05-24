@@ -2,7 +2,7 @@
 
 <%= form_with model: @food, url: "/users/#{current_user.id}/foods" do |f| %>
 
-<div class="details-box">
+<div>
     <div>
       <%= f.label :Name %>
       <%= f.text_field :name %>
@@ -10,7 +10,7 @@
 
     <div>
       <%= f.label :Measurement_Unit  %>
-      <%= f.select :measurement_unit,['grams', 'units', 'litres'] %>
+      <%= f.select :measurement_unit,['grams', 'kilograms', 'units', 'litres', 'dozen'] %>
     </div>
 
     <div>

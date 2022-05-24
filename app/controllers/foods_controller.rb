@@ -18,7 +18,7 @@ class FoodsController < ApplicationController
     if @food.save
       redirect_to user_foods_path(current_user.id)
       flash[:success] = 'Food saved successfully'
-    else 
+    else
       render :new
       flash.now[:error] = 'Food not saved'
     end
@@ -27,16 +27,16 @@ class FoodsController < ApplicationController
   def destroy
     @food = Food.find(params[:id])
 
+    redirect_to user_foods_path(current_user.id)
     if @food.destroy
-      redirect_to user_foods_path(current_user.id)
       flash[:success] = 'Food deleted successfully'
     else
-      redirect_to user_foods_path(current_user.id)
       flash.now[:error] = 'Food not deleted'
     end
   end
 
   private
+
   def food_params
     params.require(:food).permit(:name, :measurement_unit, :price)
   end

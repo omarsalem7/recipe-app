@@ -4,9 +4,7 @@
 
 > Description of the project
 
-
 ## Built With
-
 - Ruby
 - Ruby on rails
 - 💓

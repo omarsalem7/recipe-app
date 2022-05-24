@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+input[type='submit'] {
+  background-color: #157347;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 15px;
+  color: white;
+  width: 15vw;
+}
+
+input[type='submit']:hover {
+  transform: scale(0.95);
+}
+
+.trans-link {
+  color: gray;
+}
+
+.trans-link:hover {
+  color: #157347;
+}

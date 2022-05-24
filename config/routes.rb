@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'user/index'
   get 'food/index'
   get 'pages/hello'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

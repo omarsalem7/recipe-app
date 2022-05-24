@@ -1,9 +1,6 @@
 <h1>New recipe</h1>
-
 <%= render "form", recipe: @recipe %>
-
 <br>
-
 <div>
-  <%= link_to "Back to recipes", recipes_path %>
+  <%= link_to "🔙 Back", recipes_path, class: "btn btn-outline-secondary btn-sm"%>
 </div>

@@ -1,14 +1,24 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Recipes</h1>
-
-<div id="recipes">
-  <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-    <p>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
+<div>
+  <% if flash[:notice] %>
+    <p class="alert alert-success" role="alert"><%= notice %></p>
   <% end %>
+  <div class="d-flex justify-content-between align-items-center">
+    <h1>Recipes</h1>
+    <div>
+      <%= link_to "New recipe", new_recipe_path, class: "btn btn-outline-success btn-sm" %>
+    </div>
+  </div>
+  <div id="recipes">
+    <table class="table">
+      <%= render partial: "recipe_header"  %>
+      <tbody>
+        <% @recipes.each do |recipe| %>
+          <tr>
+            <%= render recipe %>
+            <td><%= link_to "Show", recipe, class: "btn btn-outline-primary btn-sm" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
-
-<%= link_to "New recipe", new_recipe_path %>

@@ -4,32 +4,37 @@
       <h2>This recipe cannot updated try again</h2>
       <ul>
         <% recipe.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <li class="alert alert-danger" role="alert"><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Enter name" %>
   </div>
-  <div>
-    <%= form.label :preparation_time, style: "display: block" %>
-    <%= form.text_field :preparation_time %>
+  <br>
+  <div class="form-group">
+    <%= form.label :preparation_time %>
+    <%= form.text_field :preparation_time, class: "form-control", placeholder: "Enter preparation time" %>
   </div>
-  <div>
-    <%= form.label :cooking_time, style: "display: block" %>
-    <%= form.text_field :cooking_time %>
+  <br>
+  <div class="form-group">
+    <%= form.label :cooking_time %>
+    <%= form.text_field :cooking_time, class: "form-control", placeholder: "Enter cooking time" %>
   </div>
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <br>
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form-control", placeholder: "Enter description", rows:"5" %>
   </div>
-  <div>
-    <%= form.label :public, style: "display: block" %>
-    <%= form.check_box :public %>
+  <br>
+  <div class="form-check">
+    <%= form.check_box :public ,class: "form-check-input"%>
+    <%= form.label :public, class:"form-check-label" %>
   </div>
-  <div>
+  <br>
+  <div class="form-group">
     <%= form.submit %>
   </div>
 <% end %>

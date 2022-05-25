@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  def index 
+  def index
     @recipes = Recipe.all
   end
 
@@ -48,7 +48,7 @@ class RecipesController < ApplicationController
   end
 
   def public
-    @public_recipes= Recipe.where(public: true)
+    @public_recipes = Recipe.where(public: true)
   end
 
   private

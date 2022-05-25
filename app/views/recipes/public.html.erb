@@ -12,9 +12,9 @@
     <% @public_recipes.each do |recipe| %>
       <tr>
         <td><%= recipe.name  %></td>
-        <td>5</td>
-        <td>55</td>
-        <td>omar</td>
+        <td><%= RecipeFood.where(recipe_id: recipe.id).count %></td>
+        <td><%=  RecipeFood.where(recipe_id: recipe.id).reduce(0) { |sum, f| sum + (f.quantity*Food.find(f.food_id).price).to_f }  %></td>
+        <td><%= User.find_by(id: recipe.user_id).name  %></td>
       </tr>
     <% end %>
   </tbody>

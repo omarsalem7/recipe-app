@@ -16,9 +16,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-/* BASIC */
-
-
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
@@ -40,8 +37,6 @@ h2 {
   margin: 40px 8px 10px 8px;
   color: #ccc;
 }
-
-/* STRUCTURE */
 
 .wrapper {
   display: flex;
@@ -75,8 +70,6 @@ h2 {
   border-radius: 0 0 10px 10px;
 }
 
-/* TABS */
-
 h2.inactive {
   color: #ccc;
 }
@@ -85,8 +78,6 @@ h2.active {
   color: #0d0d0d;
   border-bottom: 2px solid #5fbae9;
 }
-
-/* FORM TYPOGRAPHY */
 
 input[type='button'],
 input[type='submit'],
@@ -110,6 +101,15 @@ input[type='reset'] {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+input[type='submit'] {
+  background-color: #157347;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 15px;
+  color: white;
+  width: 15vw;
 }
 
 input[type='button']:hover,
@@ -185,15 +185,6 @@ input[type='text']:placeholder {
 
 *:focus {
   outline: none;
-}
-
-input[type='submit'] {
-  background-color: #157347;
-  border: none;
-  border-radius: 6px;
-  padding: 5px 15px;
-  color: white;
-  width: 15vw;
 }
 
 input[type='submit']:hover {

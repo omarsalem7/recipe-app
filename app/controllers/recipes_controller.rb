@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!, except: [:public]
   def index
     @recipes = Recipe.all
   end
@@ -17,7 +18,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
-
+    @recipe.user_id = current_user.id
     respond_to do |format|
       if @recipe.save
         format.html { redirect_to recipe_url(@recipe), notice: 'Recipe was successfully created.' }
@@ -44,6 +45,10 @@ class RecipesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
     end
+  end
+
+  def public
+    @public_recipes = Recipe.where(public: true)
   end
 
   private

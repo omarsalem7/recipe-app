@@ -3,6 +3,7 @@
         welcome <%= current_user.name %>      
         <%= link_to "view recipes", recipes_path, class: "nav-link" %>
         <%= link_to "view food", user_foods_path(current_user.id), class: "nav-link" %>
+        <%= link_to "public recipes", public_recipes_path, class: "nav-link" %>
         <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-outline-dark btn-sm" %>      
     <% else %>         
         <%= link_to 'Register', new_user_registration_path, class: "nav-link" %>

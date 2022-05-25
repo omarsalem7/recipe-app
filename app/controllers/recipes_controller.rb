@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
-  def index
+  before_action :authenticate_user!, except: [:show]
+  def index 
     @recipes = Recipe.all
   end
 
@@ -44,6 +45,10 @@ class RecipesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
     end
+  end
+
+  def public
+    @public_recipes= Recipe.where(public: true)
   end
 
   private

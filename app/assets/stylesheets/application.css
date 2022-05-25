@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   height: 100vh;
 }
 
@@ -91,9 +91,9 @@ h2.active {
 
 /* FORM TYPOGRAPHY */
 
-input[type=button],
-input[type=submit],
-input[type=reset] {
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
   background-color: #56baed;
   border: none;
   color: white;
@@ -115,15 +115,15 @@ input[type=reset] {
   transition: all 0.3s ease-in-out;
 }
 
-input[type=button]:hover,
-input[type=submit]:hover,
-input[type=reset]:hover {
+input[type='button']:hover,
+input[type='submit']:hover,
+input[type='reset']:hover {
   background-color: #39ace7;
 }
 
-input[type=button]:active,
-input[type=submit]:active,
-input[type=reset]:active {
+input[type='button']:active,
+input[type='submit']:active,
+input[type='reset']:active {
   -moz-transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -o-transform: scale(0.95);
@@ -152,12 +152,12 @@ input[type=reset]:active {
 }
 
 .text:focus,
-input[type=text]:focus {
+input[type='text']:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
+input[type='text']:placeholder {
   color: #ccc;
 }
 
@@ -169,7 +169,7 @@ input[type=text]:placeholder {
   width: 0;
   height: 2px;
   background-color: #56baed;
-  content: "";
+  content: '';
   transition: width 0.2s;
 }
 
@@ -209,4 +209,8 @@ input[type='submit']:hover {
 
 .trans-link:hover {
   color: #157347;
+}
+
+#formFooter a {
+  text-decoration: none;
 }

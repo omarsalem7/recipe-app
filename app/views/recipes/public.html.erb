@@ -1,0 +1,21 @@
+<h1 class="d-flex justify-content-center">Public recipes</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Recipe</th>
+      <th scope="col">Total food Items</th>
+      <th scope="col">Total price</th>
+      <th scope="col">Made by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @public_recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.name  %></td>
+        <td>5</td>
+        <td>55</td>
+        <td>omar</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

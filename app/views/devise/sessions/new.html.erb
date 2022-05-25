@@ -1,0 +1,23 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 class="active"> Sign In </h2>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",
+    placeholder: "Email", class: "text", id: "email" %>
+    <%= f.password_field :password, autocomplete: "current-password",
+    placeholder: "Password", class: "text", id: "password" %>
+    <%= f.submit "Log in" %>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+  <% end %>
+    <div id="formFooter">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

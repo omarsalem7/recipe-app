@@ -26,6 +26,12 @@ $ bundle install
 - Twitter: [Omar Salem](https://twitter.com/Omar80491499)
 - LinkedIn: [Omar Salem](https://www.linkedin.com/in/omar-salem-a6945b177/)
 
+👤 **Mphatso**
+
+- GitHub: [@Lichapa](https://github.com/Lichapa) 
+- Twitter: [@LichapaMphatso](https://twitter.com/LichapaMphatso) 
+- LinkedIn: [mphatsolichapa](https://www.linkedin.com/in/mphatsolichapa) 
+
 
 ## 🤝 Contributing
 

@@ -11,12 +11,12 @@
           <p class="card-text"><small class="text-muted">Cooking time: <%= @recipe.cooking_time %></small></p>
           <p class="card-text"><small class="text-muted">Preparation time: <%= @recipe.preparation_time %></small></p>
         </div>
-        <div class="form-check form-switch">       
+        <div class="form-check form-switch">
           <% if can? :manage, @recipe %>
-           <%= form_with(model: @recipe) do |form| %>
-            <%= form.check_box :public,onchange: 'this.form.submit();',class:"form-check-input"%>
-            <label class="form-check-label" for="flexSwitchCheckDefault">public</label>
-          <% end %>
+            <%= form_with(model: @recipe) do |form| %>
+              <%= form.check_box :public,onchange: 'this.form.submit();',class:"form-check-input"%>
+              <label class="form-check-label" for="flexSwitchCheckDefault">public</label>
+            <% end %>
             <div class="d-flex gap-2" style="margin:20px 0 0 -40px;"><%= link_to "Edit", edit_recipe_path(@recipe), class: "btn btn-outline-primary btn-sm" %>  <%= button_to "Destroy", @recipe, method: :delete, class: "btn btn-outline-danger btn-sm small-btn"%></div>
           <% end %>
         </div>

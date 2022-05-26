@@ -1,4 +1,4 @@
-class ShoppingListController < ApplicationController
+class ShoppingListsController < ApplicationController
   def index
     @recipes = Recipe.all
     @ingredients = RecipeFood.where(recipe_id: @recipes.map(&:id))

@@ -25,9 +25,15 @@
   </div>
   <div class="d-flex justify-content-between">
     <%= link_to "🔙 Back to recipes", recipes_path, class: "btn btn-outline-secondary btn-sm"%>
-    <button class="btn btn-success" id="addIngredient" data-toggle="modal" data-target="#exampleModal" onclick="(() => {
-      document.getElementById('toggleModel').classList.toggle('d-none')
-      })()">Add ingredient</button>
+    <% if can? :manage, @recipe%>
+      <button class="btn btn-success" id="addIngredient" data-toggle="modal" data-target="#exampleModal" onclick="(() => {
+        document.getElementById('toggleModel').classList.toggle('d-none')
+        })()">Add ingredient</button>
+    <% else %>
+      <button class="btn btn-success" disabled id="addIngredient" data-toggle="modal" data-target="#exampleModal" onclick="(() => {
+        document.getElementById('toggleModel').classList.toggle('d-none')
+        })()">Add ingredient</button>
+    <% end %>
   </div>
 </div>
 <%= render partial: "recipe_foods/recipe_food_form" %>

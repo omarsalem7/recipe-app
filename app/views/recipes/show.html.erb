@@ -12,21 +12,30 @@
           <p class="card-text"><small class="text-muted">Preparation time: <%= @recipe.preparation_time %></small></p>
         </div>
         <div class="form-check form-switch">
-          <%= form_with(model: @recipe) do |form| %>
-            <%= form.check_box :public,onchange: 'this.form.submit();',class:"form-check-input"%>
-            <label class="form-check-label" for="flexSwitchCheckDefault">public</label>
+          <% if can? :manage, @recipe %>
+            <%= form_with(model: @recipe) do |form| %>
+              <%= form.check_box :public,onchange: 'this.form.submit();',class:"form-check-input"%>
+              <label class="form-check-label" for="flexSwitchCheckDefault">public</label>
+            <% end %>
+            <div class="d-flex gap-2" style="margin:20px 0 0 -40px;"><%= link_to "Edit", edit_recipe_path(@recipe), class: "btn btn-outline-primary btn-sm" %>  <%= button_to "Destroy", @recipe, method: :delete, class: "btn btn-outline-danger btn-sm small-btn"%></div>
           <% end %>
-          <div class="d-flex gap-2" style="margin:20px 0 0 -40px;"><%= link_to "Edit", edit_recipe_path(@recipe), class: "btn btn-outline-primary btn-sm" %>  <%= button_to "Destroy", @recipe, method: :delete, class: "btn btn-outline-danger btn-sm small-btn"%></div>
         </div>
       </div>
     </div>
   </div>
   <div class="d-flex justify-content-between">
     <%= link_to "🔙 Back to recipes", recipes_path, class: "btn btn-outline-secondary btn-sm"%>
-    <button class="btn btn-success" id="addIngredient" data-toggle="modal" data-target="#exampleModal" onclick="(() => {
-      document.getElementById('toggleModel').classList.toggle('d-none')
-      })()">Add ingredient</button>
+    <% if can? :manage, @recipe%>
+      <button class="btn btn-success" id="addIngredient" data-toggle="modal" data-target="#exampleModal" onclick="(() => {
+        document.getElementById('toggleModel').classList.toggle('d-none')
+        })()">Add ingredient</button>
+    <% else %>
+      <button class="btn btn-success" disabled id="addIngredient" data-toggle="modal" data-target="#exampleModal" onclick="(() => {
+        document.getElementById('toggleModel').classList.toggle('d-none')
+        })()">Add ingredient</button>
+    <% end %>
   </div>
+  
   <div class="border rounded-3 mt-3 p-3 ">
     <div class=" align-items-center">
       <h3 class="p-2">ingredients</h3>

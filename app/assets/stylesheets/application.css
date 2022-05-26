@@ -202,3 +202,7 @@ input[type='submit']:hover {
 #formFooter a {
   text-decoration: none;
 }
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.6);
+}

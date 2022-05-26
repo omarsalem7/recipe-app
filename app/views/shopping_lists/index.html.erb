@@ -6,7 +6,7 @@
     <h1>General Shopping list</h1>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">Amount of food items to buy: <%= @ingredients.count %> </li>
-      <li class="list-group-item"> Total value of food needed: $ <%= @total_price %> </li>
+      <li class="list-group-item"> Total value of food needed: $ <%= total_price %> </li>
     </ul>
   </div>
   <div id="shopping-list">
@@ -19,14 +19,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @foods.each do |food| %>
-          <tr>
-            <% quantity = RecipeFood.joins(:food).where(food_id: food.id).sum('quantity') %>
-            <td><%= food.name %></td>
-            <td><%= quantity %></td>
-            <td><%= food.price * quantity %></td>
-          </tr>
-        <% end %>
+        <%= render "shopping_list" %>
       </tbody>
     </table>
   </div>

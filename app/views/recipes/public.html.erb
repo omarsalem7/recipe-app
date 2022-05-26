@@ -6,6 +6,7 @@
       <th scope="col">Total food Items</th>
       <th scope="col">Total price</th>
       <th scope="col">Made by</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -13,8 +14,9 @@
       <tr>
         <td><%= recipe.name  %></td>
         <td><%= RecipeFood.where(recipe_id: recipe.id).count %></td>
-        <td><%=  RecipeFood.where(recipe_id: recipe.id).reduce(0) { |sum, f| sum + (f.quantity*Food.find(f.food_id).price).to_f }  %></td>
+        <td><%= RecipeFood.where(recipe_id: recipe.id).reduce(0) { |sum, f| sum + (f.quantity*Food.find(f.food_id).price).to_f }  %></td>
         <td><%= User.find_by(id: recipe.user_id).name  %></td>
+        <td><%= button_to "Destroy", recipe, method: :delete, class: "btn btn-outline-danger btn-sm small-btn"%></td>
       </tr>
     <% end %>
   </tbody>

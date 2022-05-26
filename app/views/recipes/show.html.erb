@@ -2,14 +2,29 @@
   <% if flash[:notice] %>
     <p class="alert alert-success" role="alert"><%= notice %></p>
   <% end %>
-  <table class="table">
-    <%= render partial: "recipe_header" %>
-    <tbody>
-      <%= render @recipe %>
-      <td class="d-flex gap-2"><%= link_to "Edit", edit_recipe_path(@recipe), class: "btn btn-outline-primary btn-sm" %>  <%= button_to "Destroy", @recipe, method: :delete, class: "btn btn-outline-danger btn-sm small-btn"%></td>
-    </tbody>
-  </table>
-  <div>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title d-flex justify-content-center"><%= @recipe.name.capitalize %> recipe</h5>
+      <div class="d-flex justify-content-between m-2">
+        <div>
+          <p class="card-text">Description: <%= @recipe.description %></p>
+          <p class="card-text"><small class="text-muted">Cooking time: <%= @recipe.cooking_time %></small></p>
+          <p class="card-text"><small class="text-muted">Preparation time: <%= @recipe.preparation_time %></small></p>
+        </div>
+        <div class="form-check form-switch">
+          <%= form_with(model: @recipe) do |form| %>
+            <%= form.check_box :public,onchange: 'this.form.submit();',class:"form-check-input"%>
+            <label class="form-check-label" for="flexSwitchCheckDefault">public</label>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between">
     <%= link_to "🔙 Back to recipes", recipes_path, class: "btn btn-outline-secondary btn-sm"%>
+    <button class="btn btn-success" id="addIngredient" data-toggle="modal" data-target="#exampleModal" onclick="(() => {
+      document.getElementById('toggleModel').classList.toggle('d-none')
+      })()">Add ingredient</button>
   </div>
 </div>
+<%= render partial: "recipe_foods/recipe_food_form" %>

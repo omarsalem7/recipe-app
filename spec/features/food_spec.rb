@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'food/index.html.erb', type: :feature do
-   describe 'Food#index' do
+  describe 'Food#index' do
     before(:each) do
       @user = User.create!(name: 'Mphatso', email: 'mphatso@mail.com', password: 'password')
-      food = Food.create!(name: 'Casava', measurement_unit: 'grams', price: 2, user_id: @user.id)
+      Food.create!(name: 'Casava', measurement_unit: 'grams', price: 2, user_id: @user.id)
 
       visit new_user_session_path
       fill_in 'Email', with: 'mphatso@mail.com'
@@ -25,7 +25,6 @@ RSpec.describe 'food/index.html.erb', type: :feature do
     end
 
     it ' Delete Food' do
-
       click_button 'Delete'
 
       expect(page).to_not have_content 'Casava'

@@ -15,13 +15,18 @@
     </tr>
   </thead>
   <tbody>
+
         <% @foods.each do |food| %>
     <tr>
       <td><%=food.name%></td>
       <td><%=food.measurement_unit%></td>
-      <td><%=food.price%></td>
-      <td><%=button_to "Delete", "/users/#{current_user.id}/foods/#{food.id}",
-        :method=>:delete, :data=>{turbo:false}, class: "btn btn-outline-danger btn-sm" %> </td>
+      <td>$ <%=food.price%></td>
+      <td>      
+        <% if can? :manage, food%>
+          <%=button_to "Delete", "/users/#{current_user.id}/foods/#{food.id}",
+            :method=>:delete, :data=>{turbo:false}, class: "btn btn-outline-danger btn-sm" %> 
+        <% end %>
+      </td>
     </tr>
     <% end %>
   </tbody>

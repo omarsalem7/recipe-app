@@ -1,0 +1,22 @@
+example_id                                              | status  | run_time        |
+------------------------------------------------------- | ------- | --------------- |
+./spec/helpers/food_helper_spec.rb[1:1]                 | pending | 0.00002 seconds |
+./spec/helpers/recipe_foods_helper_spec.rb[1:1]         | pending | 0.00002 seconds |
+./spec/helpers/shopping_lists_helper_spec.rb[1:1]       | pending | 0.00003 seconds |
+./spec/helpers/user_helper_spec.rb[1:1]                 | pending | 0.00003 seconds |
+./spec/models/food_spec.rb[1:1]                         | passed  | 0.19004 seconds |
+./spec/models/recipe_food_spec.rb[1:1]                  | pending | 0.00005 seconds |
+./spec/models/recipe_spec.rb[1:1]                       | pending | 0.00003 seconds |
+./spec/models/user_spec.rb[1:1]                         | pending | 0.00003 seconds |
+./spec/requests/food_spec.rb[1:1:1]                     | failed  | 0.01138 seconds |
+./spec/requests/hello_spec.rb[1:1:1]                    | passed  | 0.4392 seconds  |
+./spec/requests/hello_spec.rb[1:1:2]                    | failed  | 0.10693 seconds |
+./spec/requests/recipe_foods_spec.rb[1:1:1]             | failed  | 0.21989 seconds |
+./spec/requests/recipe_foods_spec.rb[1:2:1]             | failed  | 0.0095 seconds  |
+./spec/requests/shopping_lists_spec.rb[1:1:1]           | failed  | 0.01047 seconds |
+./spec/requests/user_spec.rb[1:1:1]                     | failed  | 0.00914 seconds |
+./spec/views/food/index.html.erb_spec.rb[1:1]           | pending | 0.00002 seconds |
+./spec/views/recipe_foods/create.html.erb_spec.rb[1:1]  | pending | 0.00003 seconds |
+./spec/views/recipe_foods/destory.html.erb_spec.rb[1:1] | pending | 0.00005 seconds |
+./spec/views/shopping_lists/index.html.erb_spec.rb[1:1] | pending | 0.00002 seconds |
+./spec/views/user/index.html.erb_spec.rb[1:1]           | pending | 0.00018 seconds |

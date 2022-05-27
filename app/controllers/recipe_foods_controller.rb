@@ -1,6 +1,4 @@
 class RecipeFoodsController < ApplicationController
-  def destory; end
-
   def create
     recipe_foods = RecipeFood.new(quantity: params[:quantity])
     recipe_foods.food_id = params[:food_id]

@@ -22,7 +22,7 @@ RSpec.describe 'recipe index page', type: :feature do
       expect(page).to have_content 'Amount of food items to buy:'
     end
 
-    it ' Delete Food' do
+    it 'Sign out' do
       click_button 'Sign out'
 
       expect(page).to have_content 'Sign in'

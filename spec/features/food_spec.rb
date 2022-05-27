@@ -24,7 +24,7 @@ RSpec.describe 'food/index.html.erb', type: :feature do
       end
     end
 
-    it ' Delete Food' do
+    it 'Delete Food' do
       click_button 'Delete'
 
       expect(page).to_not have_content 'Casava'

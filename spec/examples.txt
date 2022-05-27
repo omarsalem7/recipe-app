@@ -1,0 +1,30 @@
+example_id                                    | status | run_time        |
+--------------------------------------------- | ------ | --------------- |
+./spec/features/food_spec.rb[1:1:1]           | passed | 0.2035 seconds  |
+./spec/features/food_spec.rb[1:1:2]           | passed | 0.17451 seconds |
+./spec/features/food_spec.rb[1:1:3]           | passed | 0.22516 seconds |
+./spec/features/login_spec.rb[1:1:1]          | passed | 0.07284 seconds |
+./spec/features/login_spec.rb[1:1:2]          | passed | 0.15392 seconds |
+./spec/features/login_spec.rb[1:1:3]          | passed | 0.13632 seconds |
+./spec/features/login_spec.rb[1:1:4]          | passed | 0.1419 seconds  |
+./spec/features/recipe_food_spec.rb[1:1:1]    | passed | 0.60072 seconds |
+./spec/features/recipe_food_spec.rb[1:1:2]    | passed | 1.8 seconds     |
+./spec/features/recipes_spec.rb[1:1:1]        | passed | 0.16673 seconds |
+./spec/features/recipes_spec.rb[1:1:2]        | passed | 0.19606 seconds |
+./spec/features/recipes_spec.rb[1:1:3]        | passed | 0.15768 seconds |
+./spec/features/shopping_lists_spec.rb[1:1:1] | passed | 0.22965 seconds |
+./spec/features/shopping_lists_spec.rb[1:1:2] | passed | 0.30792 seconds |
+./spec/models/food_spec.rb[1:1]               | passed | 0.04766 seconds |
+./spec/models/food_spec.rb[1:2]               | passed | 0.38246 seconds |
+./spec/models/food_spec.rb[1:3]               | passed | 0.06261 seconds |
+./spec/models/food_spec.rb[1:4]               | passed | 0.03728 seconds |
+./spec/models/food_spec.rb[1:5]               | passed | 0.04142 seconds |
+./spec/models/food_spec.rb[1:6]               | passed | 0.04669 seconds |
+./spec/models/food_spec.rb[1:7]               | passed | 0.06975 seconds |
+./spec/models/food_spec.rb[1:8]               | passed | 0.04528 seconds |
+./spec/models/recipe_food_spec.rb[1:1]        | passed | 0.04581 seconds |
+./spec/models/recipe_spec.rb[1:1]             | passed | 0.03998 seconds |
+./spec/models/user_spec.rb[1:1]               | passed | 0.02834 seconds |
+./spec/models/user_spec.rb[1:2]               | passed | 0.03466 seconds |
+./spec/models/user_spec.rb[1:3]               | passed | 0.02665 seconds |
+./spec/models/user_spec.rb[1:4]               | passed | 0.02704 seconds |

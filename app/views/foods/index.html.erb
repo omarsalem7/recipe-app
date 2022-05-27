@@ -1,0 +1,37 @@
+<div class="d-flex justify-content-between align-items-center">
+    <h1>Food</h1>
+    <div>
+      <%= link_to "Add food", new_user_food_path(current_user.id), class: "btn btn-outline-success btn-sm" %>
+    </div>
+  </div>
+<div>
+ <table class="table table-striped table-hover">
+  <thead class="table-light"> 
+    <tr>
+      <th>Food</th>
+      <th>Measurement Unit</th>
+      <th>Unit price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+
+        <% @foods.each do |food| %>
+    <tr>
+      <td><%=food.name%></td>
+      <td><%=food.measurement_unit%></td>
+      <td>$ <%=food.price%></td>
+      <td>      
+        <% if can? :manage, food%>
+          <%=button_to "Delete", "/users/#{current_user.id}/foods/#{food.id}",
+            :method=>:delete, :data=>{turbo:false}, class: "btn btn-outline-danger btn-sm" %> 
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+ </table>
+ 
+</div>
+
+

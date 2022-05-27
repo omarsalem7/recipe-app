@@ -9,6 +9,9 @@
             <p class="card-text">Total food Items: <%= RecipeFood.where(recipe_id: recipe.id).count %></p>
             <p class="card-text">Total price: <%= RecipeFood.where(recipe_id: recipe.id).reduce(0) { |sum, f| sum + (f.quantity*Food.find(f.food_id).price).to_f } %></p>
             <p class="card-text"><span class="fst-italic">Made by: </span><small class="text-muted"><%= User.find_by(id: recipe.user_id).name %></small></p>
+            <% if can? :manage, recipe%>
+              <%= link_to "Details",recipe ,class: "fst-italic"  %>
+            <% end %>
           </div>
           <div class="form-check form-switch">
             <% if can? :manage, recipe %>

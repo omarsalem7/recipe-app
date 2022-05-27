@@ -73,6 +73,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 6.0.0.rc1'
   gem "database_cleaner"
+  gem 'shoulda-matchers', '~> 5.1'
 end
 
 group :development do

@@ -23,7 +23,7 @@ RSpec.describe 'Post index page', type: :feature do
       expect(page).to have_content 'Preparation time'
     end
 
-    it 'When I click a user post, it redirects me to that post s show page.' do
+    it 'When I click a show button, it redirects me to that recipe show page.' do
       visit recipe_path(@recipe.id)
       expect(page).to have_content 'Description'
       expect(page).to have_content 'recipe'

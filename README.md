@@ -11,6 +11,17 @@
 - capybara
 - 💓
 
+welcome)
+
+## Requirements
+In order to work on this project, you need to have the following dependencies installed: 
+
+- [Ruby](https://www.ruby-lang.org/en/) 
+- [Postgresql](https://www.postgresql.org/)
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/)
+- [Rails](https://rubyonrails.org/)
+
 # Get Started
 To get a local copy up and running follow these simple steps.
 

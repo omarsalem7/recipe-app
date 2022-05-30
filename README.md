@@ -22,7 +22,7 @@ In order to work on this project, you need to have the following dependencies in
 - [Yarn](https://yarnpkg.com/)
 - [Rails](https://rubyonrails.org/)
 
-# Get Started
+## Get Started
 To get a local copy up and running follow these simple steps.
 
 ```bash
